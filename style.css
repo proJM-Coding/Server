@@ -1,5 +1,27 @@
 html, body {
   height: 100%;
   width: 100%;
-  background-color:#000000;
+}
+
+body {
+background-color:black;
+}
+h1{
+	background-color:transparent;
+	color:white;
+}
+
+h2{
+	background-color:transparent;
+	color:white;
+}
+
+h3{
+  background-color:transparent;
+  color:white;
+}
+
+div{
+	background-color:transparent;
+	color:white;
 }
