@@ -4,13 +4,22 @@ width:100%;
 high:100%;
 }
 
-.container { 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+.container {
   position: relative;
+  height: 400px;
+  border: 2px solid #006100;
 }
 
-.vertical-center {
+.centered-element {
+  margin: 0;
+  position: absolute;
   top: 50%;
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
