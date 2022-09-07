@@ -4,6 +4,12 @@ body {
   high:100%;
 }
 
+.container {
+  vertical-align: baseline;
+  height:100%;
+  width:100%
+}
+
 h1{
   background-color:transparent;
   color:white;
