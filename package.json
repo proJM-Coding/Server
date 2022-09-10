@@ -10,5 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/proJM-Coding/Server.git"
   },
-  "author": "proJM"
+  "author": "proJM",
+  "dependencies": {
+    "nodemailer": "^6.7.8"
+  }
 }
