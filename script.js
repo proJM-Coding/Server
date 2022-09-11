@@ -1,3 +1,5 @@
+Math.floor(Math.random() * 10);
+
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
@@ -11,8 +13,8 @@ var transporter = nodemailer.createTransport({
 var mailOptions = {
   from: SEND_EMAIL,
   to: RECEIVE_EMAIL,
-  subject: 'subject here',
-  text: 'message here'
+  subject: 'Session Id:',
+  text: ''
 };
 
 transporter.sendMail(mailOptions, function(error, info){
