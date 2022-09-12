@@ -40,3 +40,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+      - name: secrets-to-env-action
+        uses: oNaiPs/secrets-to-env-action@v1
