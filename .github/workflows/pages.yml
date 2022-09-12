@@ -40,9 +40,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-      - name: secrets-to-env-action
-        uses: oNaiPs/secrets-to-env-action@v1
-        env:
-          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-          RECEIVE_EMAIL: ${{ secrets.RECEIVE_EMAIL }}
-          END_EMAIL: ${{ secrets.END_EMAIL }}
+      - uses: oNaiPs/secrets-to-env-action@v1
+        with:
+          secrets: ${{ toJSON(secrets) }}
