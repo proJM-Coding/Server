@@ -12,6 +12,7 @@
   },
   "author": "proJM",
   "dependencies": {
+    "dotenv": "^16.0.2",
     "nodemailer": "^6.7.8"
   }
 }
