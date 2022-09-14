@@ -1,4 +1,5 @@
 function Email(){
+  require('dotenv').config();
   process.env.SEND_EMAIL;
   process.env.RECEIVE_EMAIL;
   process.env.EMAIL_PASS;
