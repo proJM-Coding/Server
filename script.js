@@ -9,14 +9,14 @@ function Email(){
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: SEND_EMAIL,
-      pass: EMAIL_PASS
+      user: process.env.SEND_EMAIL,
+      pass: process.env.EMAIL_PASS
     }
   });
 
   var mailOptions = {
-    from: SEND_EMAIL,
-    to: RECEIVE_EMAIL,
+    from: process.env.SEND_EMAIL,
+    to: process.env.RECEIVE_EMAIL,
     subject: 'Session Id:',
     text: id
   };
