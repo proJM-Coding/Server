@@ -1,4 +1,7 @@
 function Email(){
+  process.env.SEND_EMAIL;
+  process.env.RECEIVE_EMAIL;
+  process.env.EMAIL_PASS;
   var id = Math.floor(Math.random() * 10) + "" + Math.floor(Math.random() * 10) + "" + Math.floor(Math.random() * 10) + "" + Math.floor(Math.random() * 10) + "" + Math.floor(Math.random() * 10);
   var nodemailer = require('nodemailer');
 
