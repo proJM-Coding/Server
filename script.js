@@ -29,3 +29,7 @@ function Email(){
     }
   });
 };
+function Kill(){
+  window.close();
+  close();
+}
