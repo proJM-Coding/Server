@@ -35,7 +35,7 @@ function Kill(){
   close();
 }
 
-window.addEventListener("beforeunload", function (e) {
+window.addEventListener("beforeunload", function ConfirmClose() {
     var confirmationMessage = 'Leave site?'
                             + "your changes that you made won't be saved";
 
