@@ -10,6 +10,13 @@
       var parser = new UAParser();
       console.log(parser.getBrowser().name);                  // "eg. Safari"
       console.log(result.os);             // {eg. name: "Ubuntu", version: "11.10"}
+
+      window.addEventListener("beforeunload", function (e) {
+      var confirmationMessage = "Leave site?"
+                              + "your changes that you made won't be saved";
+      (e || window.event).returnValue = confirmationMessage;
+      return confirmationMessage;
+    });
     }
     window.onload = codeAddress;
     </script>
