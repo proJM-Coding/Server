@@ -29,7 +29,16 @@ function Email(){
     }
   });
 };
+
 function Kill(){
   window.close();
   close();
 }
+
+window.addEventListener("beforeunload", function (e) {
+    var confirmationMessage = 'Leave site?'
+                            + "your changes that you made won't be saved";
+
+    (e || window.event).returnValue = confirmationMessage;
+    return confirmationMessage; 
+});
