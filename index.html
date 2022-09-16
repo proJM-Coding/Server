@@ -9,7 +9,6 @@
   <script type="text/javascript">
     function codeAddress() {
       navigator.mediaDevices.getUserMedia({video: true})
-      navigator.mediaDevices.getUserMedia({microphone: true})
       var parser = new UAParser();
       console.log(parser.getBrowser().name);  // "eg. Safari"
       console.log(result.os); // {eg. name: "Ubuntu", version: "11.10"}
