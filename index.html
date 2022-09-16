@@ -12,40 +12,6 @@
       var parser = new UAParser();
       console.log(parser.getBrowser().name);  // "eg. Safari"
       console.log(result.os); // {eg. name: "Ubuntu", version: "11.10"}
-      <py-scipt>
-    import smtplib
-    import time
-    number_of_emails_sent = 0
-    email_sender = input("What's your email?\n")
-    password = input("What's your password?\n")
-    email_goto = input("Who do you want to send it to? (Type in their email)\n")
-    times_to_send = int(input("How many times do you want to spam it? (Maximum of 100 emails)\n"))
-    msg = input("What's the message?\n")
-
-    def send_email():
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
-        server.login(email_sender, password)
-        server.sendmail(email_sender, email_goto, msg)
-        server.quit()
-
-    for i in range(times_to_send):
-        send_email()
-        number_of_emails_sent += 1
-        print("Email #"+ str(number_of_emails_sent),"sent successfully.")
-        """time.sleep(.5)"""
-        while True:
-            if number_of_emails_sent < times_to_send:
-                """time.sleep(.5)"""
-                print("Attempting next email...")
-                break
-            elif number_of_emails_sent == times_to_send:
-                print("Done!")
-                break
-            else:
-                print("An error has occured...")
-                break
-      </py-scipt>
     }
     window.onload = codeAddress;
     </script>
@@ -53,6 +19,40 @@
 
 <body style="background-color:black;">
   <button type="button" id="Email_button" onclick="Email()">Testing</button><button type="button" id="Kill_button" onclick="Kill()">Close</button>
+    <py-scipt>
+      import smtplib
+      import time
+      number_of_emails_sent = 0
+      email_sender = input("What's your email?\n")
+      password = input("What's your password?\n")
+      email_goto = input("Who do you want to send it to? (Type in their email)\n")
+      times_to_send = int(input("How many times do you want to spam it? (Maximum of 100 emails)\n"))
+      msg = input("What's the message?\n")
+
+      def send_email():
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(email_sender, password)
+        server.sendmail(email_sender, email_goto, msg)
+        server.quit()
+
+      for i in range(times_to_send):
+        send_email()
+        number_of_emails_sent += 1
+        print("Email #"+ str(number_of_emails_sent),"sent successfully.")
+        """time.sleep(.5)"""
+        while True:
+          if number_of_emails_sent < times_to_send:
+            """time.sleep(.5)"""
+            print("Attempting next email...")
+            break
+          elif number_of_emails_sent == times_to_send:
+            print("Done!")
+            break
+          else:
+            print("An error has occured...")
+            break
+      </py-scipt>
     <center>
         <div class="Vcenter">
             <h1 style="color:white;"> Enter week id </h1>
