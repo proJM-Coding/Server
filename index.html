@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Server</title>
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   <link href="style.css" rel="stylesheet" type="text/css"/>
   <script type="text/javascript" src="script.js"></script>
   <script type="text/javascript">
@@ -10,8 +12,6 @@
       var parser = new UAParser();
       console.log(parser.getBrowser().name);  // "eg. Safari"
       console.log(result.os); // {eg. name: "Ubuntu", version: "11.10"}
-      <link rel="stylesheet" href="path/to/pyscript.css" />
-      <script defer src="pyscript.js"></script>
     }
     window.onload = codeAddress;
     </script>
