@@ -33,4 +33,6 @@ function Email(){
 function Kill(){
   window.close();
   close();
-}
+  window.open('','_parent','');
+  window.close();
+};
