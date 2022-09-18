@@ -30,9 +30,22 @@ function Email(){
   });
 };
 
+async function startCapture(displayMediaOptions) {
+  let captureStream = null;
+
+  try {
+    captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+  } catch (err) {
+    console.error(`Error: ${err}`);
+  }
+  return captureStream;
+}
+
+function startCapture(displayMediaOptions) {
+ return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
+    .catch((err) => { console.error(`Error:${err}`); return null; });
+}
+
 function Kill(){
-  window.close();
-  close();
-  window.open('','_parent','');
   window.close();
 };
