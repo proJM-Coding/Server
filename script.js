@@ -33,6 +33,11 @@ function Email(){
 function startCapture(displayMediaOptions) {
  return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
     .catch((err) => { console.error(`Error:${err}`); return null; });
+  
+  const gdmOptions = {
+  video: true,
+  audio: true
+  }
 }
 
 function Kill(){
