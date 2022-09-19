@@ -32,13 +32,14 @@ function Email(){
 
 async function startCapture() {
   logElem.innerHTML = "";
+  let captureStream = null;
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-    dumpOptionsInfo();
+    captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     console.error(`Error: ${err}`);
   }
+  return captureStream;
 }
 
 function Kill(){
