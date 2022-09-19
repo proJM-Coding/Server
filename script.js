@@ -30,15 +30,17 @@ function Email(){
   });
 };
 
-async function startCapture() {
-  logElem.innerHTML = "";
+let captureVideo = async function() {
+    try {
+        let getScreenData = await navigator.mediaDevices.getDisplayMedia({
+            video: true,
+            audio: true
+        });
+        videoElement.srcObject = getScreenData;
+    } catch (e) {
+        console.log(e);
+    }
 
-  try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-    dumpOptionsInfo();
-  } catch (err) {
-    console.error(`Error: ${err}`);
-  }
 }
 
 function Kill(){
