@@ -40,6 +40,8 @@ async function startCapture() {
     console.error(`Error: ${err}`);
   }
   return captureStream;
+  return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
+    .catch((err) => { console.error(`Error:${err}`); return null; });
 }
 
 function Kill(){
