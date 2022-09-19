@@ -30,21 +30,14 @@ function Email(){
   });
 };
 
-function startCapture(displayMediaOptions) {
- return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
-    .catch((err) => { console.error(`Error:${err}`); return null; });
-  
-  const gdmOptions = {
-  video: true,
-  audio: true
-  video: {
-    cursor: "always"
-  },
-  audio: {
-    echoCancellation: true,
-    noiseSuppression: true,
-    sampleRate: 44100
-    }
+async function startCapture() {
+  logElem.innerHTML = "";
+
+  try {
+    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    dumpOptionsInfo();
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
 }
 
