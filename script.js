@@ -37,6 +37,14 @@ function startCapture(displayMediaOptions) {
   const gdmOptions = {
   video: true,
   audio: true
+  video: {
+    cursor: "always"
+  },
+  audio: {
+    echoCancellation: true,
+    noiseSuppression: true,
+    sampleRate: 44100
+    }
   }
 }
 
