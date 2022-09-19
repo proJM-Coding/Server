@@ -9,7 +9,6 @@ body {
   top: 50%;
   margin-top: -200px;
   /* Half of #content height */
-  left: 0;
   width: 100%;
 }
 
