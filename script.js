@@ -30,19 +30,6 @@ function Email(){
   });
 };
 
-let captureVideo = async function() {
-    try {
-        let getScreenData = await navigator.mediaDevices.getDisplayMedia({
-            video: true,
-            audio: true
-        });
-        videoElement.srcObject = getScreenData;
-    } catch (e) {
-        console.log(e);
-    }
-
-}
-
 function Kill(){
   window.close();
 };
