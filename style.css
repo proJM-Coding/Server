@@ -1,25 +1,8 @@
 body {
   background-color:#38404a;
-  color:#38404a;
-  width:100%;
-  high:100%;
 }
 
 h1{
   background-color:transparent;
-  color:white;
-}
-
-h2{
-  background-color:transparent;
-  color:white;
-}
-
-h3{
-  background-color:transparent;
-  color:white;
-}
-
-button{
   color:white;
 }
