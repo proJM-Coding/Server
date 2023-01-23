@@ -2,7 +2,7 @@ import FingerprintJS from '@fingerprintjs/fingerprintjs-pro'
 
 // Initialize an agent at application startup.
 const fpPromise = FingerprintJS.load({
-  apiKey: "DyRXD90KGoX187TPJ9pn"
+  apiKey: "qbxo2NIBM9u5RhPXcET6"
 })
 
 // Get the visitor identifier when you need it.
@@ -12,7 +12,7 @@ fpPromise
 
 <script>
     // Initialize the agent at application startup.
-    const fpPromise = import('https://fpjscdn.net/v3/DyRXD90KGoX187TPJ9pn')
+    const fpPromise = import('https://fpjscdn.net/v3/qbxo2NIBM9u5RhPXcET6')
       .then(FingerprintJS => FingerprintJS.load())
 
     // Get the visitor identifier when you need it.
